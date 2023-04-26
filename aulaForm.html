@@ -12,6 +12,8 @@
   
   <link rel="stylesheet" href="./Styles/stylesPadrao.css">
   <link rel="stylesheet" href="./Styles/formStyle.css">
+
+  <script src="./Scripts/formScript.js" defer></script>
 </head>
 <body>
   <main id="containerForm">
@@ -21,31 +23,31 @@
       <!-- Entrada do tipo texto. Uma entrada padrão para qualquer tipo de texto -->
       <div class="d-flex padding" >
         <label for="iptNomeUsuario">Nome de usuario:</label>
-        <input id="iptNomeUsuario" type="text">
+        <input id="iptNomeUsuario" type="text" name="iptNomeUsuario">
       </div>
 
       <!-- Entrada do tipo senha. Esconde os caracteres e tbm possui o opcao de visibilidade -->
       <div class="d-flex padding" >
         <label for="iptSenha">Senha:</label>
-        <input id="iptSenha" type="password">
+        <input id="iptSenha" type="password" name="iptSenha">
       </div>
 
       <!-- Entrada do tipo email. Esse campo valida a estrutura para o formato de email. É recomendado mesmo que exista essa validação no HTML, realizar ela em sua aplicacao tbm -->
       <div class="d-flex padding" >
         <label for="iptEmail">Email:</label>
-        <input id="iptSenha" type="email">
+        <input id="iptEmail" type="email" name="iptEmail">
       </div>
 
       <!-- Entrada do tipo Data. Para o usuario selecionar uma data, este campo vem com o padrao de data do sistema do usuario -->
       <div class="d-flex padding" >
         <label for="iptData">Data:</label>
-        <input id="iptData" type="date">
+        <input id="iptData" type="date" name="iptData">
       </div>
 
       <!-- Entrada do tipo arquivo. Precisa de tratamento da aplicacao para receber o arquivo e tbm precisamos usar JS para tratar o tipo de arquivo que queremos permitir -->
       <div class="d-flex padding" >
         <label for="iptArquivo">Arquivo:</label>
-        <input id="iptArquivo" type="file">
+        <input id="iptArquivo" type="file" name="iptArquivo">
       </div>
 
       <!-- Entrada do tipo checkbox. IDs diferentes e name igual. O valor passado é o valor definido dentro da tag value -->
@@ -78,8 +80,13 @@
 
       <!-- Textarea nn é um input necessariamente. Ele é utilizado para entrada de textos longos -->
       <div class="d-flex padding" >
-        <label for="iptArquivo">Arquivo:</label>
-        <textarea id="iptArquivo" rows="7"></textarea>
+        <label for="txtAreaObservacao">Observacao:</label>
+        <textarea id="txtAreaObservacao" rows="7" name="txtAreaObservacao"></textarea>
+      </div>
+
+      <div id="containerBtns">
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar campos</button>
       </div>
     </form>
   </main>
